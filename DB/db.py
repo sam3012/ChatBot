@@ -3,8 +3,8 @@ import sqlite3
 
 class DB_OPERATION:
     def __init__(self):
-        self.conn = sqlite3.connect(
-            r'E:\SAM\SEM 6 PROJECTS\Openai_ChatBot (MAIN PROJECT)\DB\ChatBot.db')
+        db_path = os.path.join(os.path.dirname(__file__), 'ChatBot.db')
+        self.conn = sqlite3.connect(db_path)
         cursor = self.conn.cursor()
         cursor.execute(
             """
