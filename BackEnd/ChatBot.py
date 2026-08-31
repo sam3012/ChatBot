@@ -1,6 +1,7 @@
+import os
 import openai
 
-openai.api_key = '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'
+openai.api_key = os.getenv("OPENAI_API_KEY", "your_openai_api_key_here")
 
 def open_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as infile:
